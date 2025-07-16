@@ -74,3 +74,32 @@ To run the project locally, follow these steps:
     dbt docs generate
     dbt docs serve
     ```
+### Task 3: Object Detection using YOLO
+
+- **Setting Up the Environment**: Ensure you have the necessary dependencies installed, including YOLO and its required libraries (e.g., OpenCV, TensorFlow, or PyTorch depending on the YOLO implementation).
+
+    ```bash
+    pip install opencv-python
+    pip install torch torchvision  # for PyTorch-based YOLO
+    pip install tensorflow  # for TensorFlow-based YOLO
+    ```
+
+- **Downloading the YOLO Model**:
+
+    ```bash
+    git clone https://github.com/ultralytics/yolov5.git
+    cd yolov5
+    pip install -r requirements.txt
+    ```
+
+- Once you are installed the yolo model, go to the notebooks directory and Run the notebook to check the outputs and explore the PostgreSQL database for stored data.
+
+### Task 4: FastAPI Integration
+
+- Make sure you are in the root directory and run this command:
+
+    ```bash
+    uvicorn app.main:app --reload
+    ```
+
+- Note: Ensure that all the required libraries are installed. You can install any missing dependencies manually using `requirements.txt`.
